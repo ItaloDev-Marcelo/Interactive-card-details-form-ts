@@ -23,6 +23,7 @@ const Form = () => {
        </div>
         <Input Data={inputFormate[4]} register={register}  inputErrorSms={errors}   />
         <Button type='submit' name='Confirm' />
+        
     </form>
   )
 }
