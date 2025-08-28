@@ -6,4 +6,5 @@ export interface DataFormate {
   Data: FormFormate;
   register: UseFormRegister<CardSchema>;
   inputErrorSms: FieldErrors<CardSchema>;
+  style: string
 }

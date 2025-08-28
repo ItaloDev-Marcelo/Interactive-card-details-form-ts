@@ -7,21 +7,27 @@ import {inputFormate} from '../data/inputFormate'
 import Button from '../components/Button'
 const Form = () => {
 
-    const {register, handleSubmit,formState: {errors}} = useForm({resolver: zodResolver(CreditCardSchema)})
+    const {register, handleSubmit,formState: {errors}, watch} = useForm({resolver: zodResolver(CreditCardSchema)})
+    
     const onSubmitForm = (formData:CardSchema) => {
       console.log(formData)
     }
 
   return (
-    <form onSubmit={handleSubmit(onSubmitForm)}>
-       <Input Data={inputFormate[0]} register={register}  inputErrorSms={errors}   />
-       <Input Data={inputFormate[1]} register={register}  inputErrorSms={errors}   />
-       <div>
+    <form onSubmit={handleSubmit(onSubmitForm)} className='w-[330px] md:w-[400px] xl:w-[425px] bg-red-500'>
+       <Input Data={inputFormate[0]} register={register}  inputErrorSms={errors} style='w-[200px] md:w-[300px] xl:w-[350px] '  />
+       <Input Data={inputFormate[1]} register={register}  inputErrorSms={errors} style='w-[200px] md:w-[300px] xl:w-[350px]'  />
+       <div className='flex flex-row flex-wrap'>
+      <div className='flex flex-col'>      
        <label>EXP. DATE (MM/YY)</label>
-       <Input Data={inputFormate[2]} register={register}  inputErrorSms={errors}   />
-       <Input Data={inputFormate[3]} register={register}  inputErrorSms={errors}   />
+        <div className='flex flex-row items-center'>
+           <Input Data={inputFormate[2]} register={register}  inputErrorSms={errors} style='w-[70px] md:w-[90px] mr-4'   />
+           <Input Data={inputFormate[3]} register={register}  inputErrorSms={errors} style='w-[70px] md:w-[90px] mr-4'   />
+        </div>
+          </div>
+          
+        <Input Data={inputFormate[4]} register={register}  inputErrorSms={errors} style='w-[100px] md:w-[140px]'  />
        </div>
-        <Input Data={inputFormate[4]} register={register}  inputErrorSms={errors}   />
         <Button type='submit' name='Confirm' />
         
     </form>
