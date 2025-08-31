@@ -6,5 +6,6 @@ export interface FormFormate {
   name: NameType;
   placeholder: string;
   inputType: string;
+  max?: number
 }
 

@@ -22,7 +22,7 @@ const DetailsCardLayout = () => {
   const ExperationDateYear = watch('ExperationDateYear') || '00'
   const Cvc = watch('Cvc') || '000'
 
-  const formateNums = (valor:string) => valor.replace(/(.{4})/g, '$1 ')
+  const formateNums = (valor:string) => valor.replace(/(.{4})/g, '$1  ')
 
 
 
@@ -42,27 +42,30 @@ const DetailsCardLayout = () => {
                 
               <Input Data={inputFormate[4]} register={register}  inputErrorSms={errors} style='w-[105px] md:w-[140px]'  />
              </div>
-              <Button type='submit' name='Confirm' />
+              <Button type='submit' name='Confirm' style='w-[325px] md:w-[300px] xl:w-[350px] 
+              h-[40px] bg-black text-white font-medium cursor-pointer rounded-[4px] hover:opacity-90' />
               
        </form>
 
-       <div className='bg-red-200 relative'>
-           <figure className='relative'>
-              <img src={FrontCard} alt='' />
-              <img src={CardLogo} alt='' />
-              <div className='flex flex-col'>
-                 <p>{formateNums(CardNumber)}</p>
-                 <div>
-                    <p>{Name}</p>
-                    <p> {ExperationDateDay}/{ExperationDateYear}</p>
-                 </div>
-              </div>
-           </figure>
+       <div className='bg-red-200 relative flex flex-col md:flex-col-reverse'>
 
            <figure className='relative'>
               <img src={BackCard} alt='' />
-              <div className='flex flex-col'>
-                 <p>{Cvc}</p>
+              <div className='flex flex-col absolute top-24 left-82'>
+                 <p className='text-white text-[1em] font-medium '>{Cvc}</p>
+              </div>
+           </figure>
+
+
+           <figure className='relative '>
+              <img src={FrontCard} alt=''  />
+              <img src={CardLogo} alt='' className='absolute left-7 top-10' />
+              <div className='flex flex-col  p-4 absolute top-27 left-5 w-[370px]'>
+                 <p className='text-white text-[1.93em] font-semibold tracking-[2px] mb-1.5'>{formateNums(CardNumber)}</p>
+                 <div className='flex justify-between items-center '>
+                    <p className='text-white text-[.8em] font-medium tracking-[2px] uppercase'>{Name}</p>
+                    <p className='text-white text-[1.1em] font-medium tracking-[2px]'> {ExperationDateDay}/{ExperationDateYear}</p>
+                 </div>
               </div>
            </figure>
 
