@@ -1,10 +1,11 @@
-// import Form from './Form/Form'
+
 import MainContainer from './components/MainContainer'
-import Form from './Form/Form'
+
+import DetailsCardLayout from './layout/DetailsCardLayout'
 function App() {
 
   return <MainContainer>
-    <Form />
+    <DetailsCardLayout />
   </MainContainer>
 }
 
