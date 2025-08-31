@@ -2,14 +2,15 @@
 @plugin "daisyui";
 
 
-figure {
-    transform: scale(.9)
-}
 
 
 body {
     background: url(./assets/images/bg-main-mobile.png) no-repeat;
     background-size: 100% 35%;
+}
+
+figure {
+    transform: scale(.89)
 }
 
 
@@ -18,5 +19,11 @@ body {
     background: url(./assets/images/bg-main-mobile.png) no-repeat;
     background-size: 25% 100%;
 }
+
+
+figure {
+    transform: scale(.9)
+}
+
 }
 

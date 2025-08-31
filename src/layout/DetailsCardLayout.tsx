@@ -49,22 +49,22 @@ const DetailsCardLayout = () => {
 
        <div className=' relative flex flex-col '>
 
-           <figure className='relative xl:left-17 xl:top-2 '>
+           <figure className='relative top-20  xl:left-17 xl:top-2 '>
               <img src={BackCard} alt='' />
-              <div className='flex flex-col absolute top-24 left-82'>
+              <div className='flex flex-col absolute xl:top-24 top-23 left-72 xl:left-82'>
                  <p className='text-white text-[1em] font-medium '>{Cvc}</p>
               </div>
            </figure>
 
 
-           <figure className='relative  '>
+           <figure className='relative right-2 top-[-1.3em] xl:right-0 xl:top-0  '>
               <img src={FrontCard} alt=''  />
-              <img src={CardLogo} alt='' className='absolute left-7 top-10' />
-              <div className='flex flex-col  p-4 absolute top-27 left-5 w-[370px]'>
-                 <p className='text-white text-[1.93em] font-semibold tracking-[2px] mb-1.5'>{formateNums(CardNumber)}</p>
+              <img src={CardLogo} alt='' className='absolute top-7 left-5 xl:left-7 xl:top-10' />
+              <div className='flex flex-col  p-4 absolute top-22 left-1.5 xl:top-27 xl:left-5 w-[370px]'>
+                 <p className='text-white  text-[1.90em] xl:text-[1.93em] font-semibold tracking-[2px] mb-1.5'>{formateNums(CardNumber)}</p>
                  <div className='flex justify-between items-center '>
                     <p className='text-white text-[.8em] font-medium tracking-[2px] uppercase'>{Name}</p>
-                    <p className='text-white text-[1.1em] font-medium tracking-[2px]'> {ExperationDateDay}/{ExperationDateYear}</p>
+                    <p className='text-white text-[1.1em] font-medium tracking-[2px] mr-2 xl:mr-0'> {ExperationDateDay}/{ExperationDateYear}</p>
                  </div>
               </div>
            </figure>
