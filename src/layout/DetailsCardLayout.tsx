@@ -27,8 +27,8 @@ const DetailsCardLayout = () => {
 
 
   return (
-    <div>
-       <form onSubmit={handleSubmit(onSubmit)} className='w-[330px] md:w-[400px] xl:w-[425px] bg-blue-200'>
+    <>
+       <form onSubmit={handleSubmit(onSubmit)} className='w-[330px] md:w-[400px] xl:w-[425px] '>
              <Input Data={inputFormate[0]} register={register}  inputErrorSms={errors} style='w-[325px] md:w-[300px] xl:w-[350px] '  />
              <Input Data={inputFormate[1]} register={register}  inputErrorSms={errors} style='w-[325px] md:w-[300px] xl:w-[350px]'  />
              <div className='flex flex-row flex-wrap'>
@@ -47,9 +47,9 @@ const DetailsCardLayout = () => {
               
        </form>
 
-       <div className='bg-red-200 relative flex flex-col md:flex-col-reverse'>
+       <div className=' relative flex flex-col '>
 
-           <figure className='relative'>
+           <figure className='relative xl:left-17 xl:top-2 '>
               <img src={BackCard} alt='' />
               <div className='flex flex-col absolute top-24 left-82'>
                  <p className='text-white text-[1em] font-medium '>{Cvc}</p>
@@ -57,7 +57,7 @@ const DetailsCardLayout = () => {
            </figure>
 
 
-           <figure className='relative '>
+           <figure className='relative  '>
               <img src={FrontCard} alt=''  />
               <img src={CardLogo} alt='' className='absolute left-7 top-10' />
               <div className='flex flex-col  p-4 absolute top-27 left-5 w-[370px]'>
@@ -71,7 +71,7 @@ const DetailsCardLayout = () => {
 
 
        </div>
-    </div>
+    </>
   )
 }
 
