@@ -13,16 +13,54 @@ figure {
     transform: scale(.89)
 }
 
+@media(min-width: 768px) {
+     figure {
+    transform: scale(1)
+}
 
-@media(min-width: 1280px) {
    body {
     background: url(./assets/images/bg-main-mobile.png) no-repeat;
     background-size: 25% 100%;
 }
 
 
+} 
+
+
+@media(min-width: 1280px) {
+   body {
+    background: url(./assets/images/bg-main-desktop.png) no-repeat;
+    background-size: 25% 100%;
+}
+
+
+form {
+    transform: scale(1.1)
+}
+
+
 figure {
     transform: scale(.9)
+}
+
+}
+
+
+
+@media(min-width: 1440px) {
+   body {
+    background: url(./assets/images/bg-main-desktop.png) no-repeat;
+    background-size: 25% 100%;
+}
+
+
+form {
+    transform: scale(1.2)
+}
+
+
+figure {
+    transform: scale(1.1)
 }
 
 }

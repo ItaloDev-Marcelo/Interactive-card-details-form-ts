@@ -5,7 +5,7 @@ import {z} from 'zod';
 export const CreditCardSchema = z.object({
      Name: z.string()
     .nonempty("Can't be blank")
-    .min(4, 'Name must have unless 4 letters '),
+    .min(4, 'Firt name and middle name '),
     CardNumber: z.string()
     .nonempty("Can't be blank")
     .regex(/^\d{16}/, 'Wrong format, numbers only'),
