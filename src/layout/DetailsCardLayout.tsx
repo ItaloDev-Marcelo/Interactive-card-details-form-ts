@@ -7,14 +7,19 @@ import Button from '../components/Button'
 import FrontCard from '../assets/images/bg-card-front.png';
 import BackCard from '../assets/images/bg-card-back.png';
 import CardLogo from '../assets/images/card-logo.svg';
-
+import Thanks from '../components/Thanks';
+import { useState } from 'react'
 const DetailsCardLayout = () => {
 
    const {register, handleSubmit, formState: {errors}, watch} = useForm<CardSchema>({resolver: zodResolver(CreditCardSchema)})
-      
+   const [nextStep, setNextStep] = useState(false)
   const onSubmit = (formData:CardSchema) => {
         console.log(formData)
-  }
+        const {Name, CardNumber, ExperationDateDay, ExperationDateYear, Cvc} = formData;
+
+        if(Name.length !== 0 && CardNumber.length !== 0 && ExperationDateDay.length !== 0 && ExperationDateYear.length !== 0 && Cvc.length !== 0) setNextStep(!nextStep)
+
+      }
 
   const CardNumber = watch('CardNumber') || '0000000000000000'
   const Name = watch('Name') || 'Jane Appleseed'
@@ -28,7 +33,8 @@ const DetailsCardLayout = () => {
 
   return (
     <>
-       <form onSubmit={handleSubmit(onSubmit)} className='w-[330px] 
+       {
+         !nextStep ? <form onSubmit={handleSubmit(onSubmit)} className='w-[330px] 
        md:w-[400px]  xl:w-[425px] mt-[-1.2em] relative md:top-[-4.5rem] xl:top-0   xl:mt-0 '>
              <Input Data={inputFormate[0]} register={register}  inputErrorSms={errors} style='w-[325px] md:w-[349px] xl:w-[350px] '  />
              <Input Data={inputFormate[1]} register={register}  inputErrorSms={errors} style='w-[325px] md:w-[349px] xl:w-[350px]'  />
@@ -46,7 +52,8 @@ const DetailsCardLayout = () => {
               <Button type='submit' name='Confirm' style='w-[325px] md:w-[349px] xl:w-[350px] 
               h-[40px] bg-black text-white font-medium mb-2 cursor-pointer rounded-[4px] hover:opacity-90' />
               
-       </form>
+       </form>: <Thanks />
+       }
 
        <div className=' relative md:top-[-7em] xl:top-5 space-y-4 flex flex-col '>
 
