@@ -65,7 +65,7 @@ const DetailsCardLayout = () => {
            </figure>
 
 
-           <figure className='relative top-[-3.6em] right-2 md:right-[4em] xl:right-0 xl:top-0  '>
+           <figure className='relative top-[-3.4em] right-2 md:right-[4em] xl:right-0 xl:top-0  '>
               <img src={FrontCard} alt=''  />
               <img src={CardLogo} alt='' className='absolute top-7
                left-5 md:left-10 md:top-12 xl:left-7 xl:top-10' />
