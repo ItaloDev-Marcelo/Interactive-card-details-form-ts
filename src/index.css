@@ -18,18 +18,15 @@ figure {
     transform: scale(1)
 }
 
-   body {
-    background: url(./assets/images/bg-main-mobile.png) no-repeat;
-    background-size: 25% 100%;
-}
-
 
 } 
 
 
 @media(min-width: 1280px) {
-   body {
-    background: url(./assets/images/bg-main-desktop.png) no-repeat;
+
+
+       body {
+    background: url(./assets/images/bg-main-mobile.png) no-repeat;
     background-size: 25% 100%;
 }
 

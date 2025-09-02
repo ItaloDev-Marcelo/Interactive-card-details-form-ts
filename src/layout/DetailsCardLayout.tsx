@@ -35,7 +35,7 @@ const DetailsCardLayout = () => {
     <>
        {
          !nextStep ? <form onSubmit={handleSubmit(onSubmit)} className='w-[330px] 
-       md:w-[400px]  xl:w-[425px] mt-[-1.2em] relative md:top-[-4.5rem] xl:top-0   xl:mt-0 '>
+       md:w-[400px]  xl:w-[425px] mt-[-1.2em] relative md:top-[-4.5rem] top-[-2.5em] xl:top-0   xl:mt-0 '>
              <Input Data={inputFormate[0]} register={register}  inputErrorSms={errors} style='w-[325px] md:w-[349px] xl:w-[350px] '  />
              <Input Data={inputFormate[1]} register={register}  inputErrorSms={errors} style='w-[325px] md:w-[349px] xl:w-[350px]'  />
              <div className='flex flex-row flex-wrap'>
@@ -47,7 +47,7 @@ const DetailsCardLayout = () => {
               </div>
                 </div>
                 
-              <Input Data={inputFormate[4]} register={register}  inputErrorSms={errors} style='w-[105px] md:w-[140px]'  />
+              <Input Data={inputFormate[4]} register={register}  inputErrorSms={errors} style='w-[137px] md:w-[140px]'  />
              </div>
               <Button type='submit' name='Confirm' style='w-[325px] md:w-[349px] xl:w-[350px] 
               h-[40px] bg-black text-white font-medium mb-2 cursor-pointer rounded-[4px] hover:opacity-90' />
@@ -55,9 +55,9 @@ const DetailsCardLayout = () => {
        </form>: <Thanks />
        }
 
-       <div className=' relative md:top-[-7em] xl:top-5 space-y-4 flex flex-col '>
+       <div className='absolute top-0 md:top-[-7em] xl:top-5 space-y-4 flex flex-col'>
 
-           <figure className='relative top-23 md:left-15  xl:left-17  xl:top-2 '>
+           <figure className='relative top-15 md:left-15  xl:left-17  xl:top-2 '>
               <img src={BackCard} alt='' />
               <div className='flex flex-col absolute top-22 md:top-27 xl:top-26.5  left-74 md:left-90 '>
                  <p className='text-white text-[1em] font-medium '>{Cvc}</p>
@@ -65,16 +65,16 @@ const DetailsCardLayout = () => {
            </figure>
 
 
-           <figure className='relative right-2 md:right-[4em] top-[-1.5em] xl:right-0 xl:top-0  '>
+           <figure className='relative top-[-3.7em] right-2 md:right-[4em] xl:right-0 xl:top-0  '>
               <img src={FrontCard} alt=''  />
               <img src={CardLogo} alt='' className='absolute top-7
                left-5 md:left-10 md:top-12 xl:left-7 xl:top-10' />
               <div className='flex flex-col 
                p-4 absolute top-22 md:top-27 left-1.5 md:left-7 xl:top-27 xl:left-5 w-[370px] xl:w-[400px]'>
-                 <p className='text-white  text-[1.90em] xl:text-[2.1em] font-semibold tracking-[2px] mb-1.5 xl:mb-3'>{formateNums(CardNumber)}</p>
+                 <p className='text-white  text-[1.5em] xl:text-[2.1em] font-semibold tracking-[2px] mb-1.5 xl:mb-3 shrink '>{formateNums(CardNumber)}</p>
                  <div className='flex justify-between items-center '>
-                    <p className='text-white text-[.8em] font-medium tracking-[2px] uppercase'>{Name}</p>
-                    <p className='text-white text-[1.1em] font-medium tracking-[2px] mr-2 xl:mr-0.5'> {ExperationDateDay}/{ExperationDateYear}</p>
+                    <p className='text-white text-[.8em] font-medium tracking-[2px] uppercase shrink '>{Name}</p>
+                    <p className='text-white text-[1.1em] font-medium tracking-[2px] mr-3.5 shrink '> {ExperationDateDay}/{ExperationDateYear}</p>
                  </div>
               </div>
            </figure>
