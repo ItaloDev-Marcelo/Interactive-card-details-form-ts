@@ -22,6 +22,23 @@ figure {
 } 
 
 
+
+@media(min-width: 375px) and (min-height: 667px) {
+     form {
+     position:relative;
+     top: 1em;
+}
+
+
+#thanks {
+    position: relative;
+    top:-3em;
+}
+
+
+} 
+
+
 @media(min-width: 1280px) {
 
 

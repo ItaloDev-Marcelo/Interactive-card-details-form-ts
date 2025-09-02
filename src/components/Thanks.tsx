@@ -2,8 +2,8 @@ import Button from '../components/Button'
 import complateIcon from '../assets/images/icon-complete.svg'
 const Thanks = () => {
   return (
-    <article className='w-[330px] lex flex-col text-center items-center justify-center
-       md:w-[400px]  xl:w-[425px] mt-[-1.2em] relative md:top-[-4.5rem] xl:top-0  xl:right-20 xl:mt-0 '>
+    <article id='thanks' className='w-[330px] lex flex-col text-center items-center justify-center
+       md:w-[400px]  xl:w-[425px] mt-[-1.2em]  relative md:top-[-4.5rem] xl:top-0  xl:right-20 xl:mt-0 '>
          
               <img src={complateIcon} alt='' className='mx-auto my-4  ' />
          

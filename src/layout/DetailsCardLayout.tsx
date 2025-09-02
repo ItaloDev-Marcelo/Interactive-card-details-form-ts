@@ -55,7 +55,7 @@ const DetailsCardLayout = () => {
        </form>: <Thanks />
        }
 
-       <div className='absolute top-0 md:top-[-7em] xl:top-5 space-y-4 flex flex-col'>
+       <div className='absolute top-0 xl:relative md:top-[-7em] xl:top-5 space-y-4 flex flex-col'>
 
            <figure className='relative top-15 md:left-15  xl:left-17  xl:top-2 '>
               <img src={BackCard} alt='' />
